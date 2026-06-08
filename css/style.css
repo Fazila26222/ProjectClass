@@ -8,7 +8,8 @@
 }
 body{
     font-family: 'DM Sans', sans-serif;
-    color: #000;
+    background: var(--bg-main);
+    color: var(--text-primary);
     font-size: 16px;
     line-height: 1.65;
     overflow: hidden;
@@ -22,24 +23,24 @@ h6
 {
 font-family: 'Sora', sans-serif;
 font-weight: 700;
-color: #000;
+color: var(--text-primary);
 }
 a{
     text-decoration: none !important;
-    color: #fff !important;
+    color: inherit ;
 }
 #top-header{
-    background-color: #014beb;
+    background-color: var(--primary);
     padding: 10px 0px;
     font-size: 13px;
-    color: #fff !important;
+    color: #fff;
 }
-#top-heager a{
+#top-header a{
     color: #fff;
     opacity: 0.88;
-    transition: 28s cubic-bezier(.4,0,.2,1); 
+    transition: opacity var( --transition); 
 }
-#top-heager a:hover{
+#top-header a:hover{
     opacity: 1;
 }
 .top-social a{
@@ -50,6 +51,8 @@ a{
     height: 28px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, .14);
+    font-size: 13px;
+    transition: background var(--transition),transform var(--transition);
 }
 .top-social a:hover{
     background-color: rgba(255, 255, 255, .3);
@@ -58,50 +61,53 @@ a{
 
 
 /*navbar*/
+
+
 #mainNav{
-    background-color: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
+    background: var(--bg-section);
+    border-bottom: 1px solid var(--border);
     padding: 14px 0 !important;
-    transition: box-shadow 28s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: box-shadow var(--transition);
 }
 #mainNav.scrolled{
-    box-shadow: 0 4px 16px rgba(37, 99, 25, 12),0 2px 6px rgba(0, 0, 0, 06);
+    box-shadow: var(--shadow-md);
 }
 
 .navbar-brand{
-    font-family: sans-serif;
+    font-family: "Sora"sans-serif;
     font-weight: 800;
     font-size: 1.5rem;
-    color: #053eb8 !important;
+    color: var(--primary) !important;
     letter-spacing: -0.5px;
 }
 .navbar-brand span{
-    color: #000;
+    color: var( --texr-primary);
 }
 .nav-link{
     font-family: 'Sora',sans-serif;
     font-weight: 500;
     font-size: 0.88rem;
-    color:#555 !important;
+    color: var(--text-secondary) !important;
     padding: 8px 14px !important;
     border-radius: 8px;
-    transition: .28s cubic-bezier(.4,0,.2,1);
+    transition: color var(--transition),background var(--transition);
 }
 .nav-link:hover,.nav-link.active{
-    color: #5b2eff !important;
+    color: var(--primary) !important;
     background: rgba(37, 99, 255, 0.07);
 }
 .btn-nav-login{
     font-family: sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #555 !important ;
-    border: 1.5px solid calc(2,45,78);
+    color: var(--primary) !important ;
+    border: 1.5px solid var(--primary);
     border-radius: 9px;
     padding: 8px 22px;
+    transition: all var(--transition);
 }
 .btn-nav-login:hover{
-    background:rgba(37, 99, 255, 0.07);
+    background: var(--primary);
     color: #5b2eff;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(37, 99, 255, .6);
@@ -110,19 +116,19 @@ a{
     font-family: sans-serif;
     font-size: 0.85rem;
     font-weight: 600;
-    color: #555 !important;
-    border: 1.5px solid calc(2,45,78);
+    color: var(--primary) !important;
+    border: 1.5px solid var(--primary);
     border-radius: 9px;
     padding: 8px 22px;
 }
 .btn-nav-register:hover{
-    background:rgba(37, 99, 255, 0.07);
+    background: var(--primary);
     color: #5b2eff;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(37, 99, 255, .6);
 }
 .offcanvas-header{
-    background-color: #053eb8;
+    background-color: var(--primary);
     color: #fff;
 }
 .offcanvas-title{
