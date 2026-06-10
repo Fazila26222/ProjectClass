@@ -92,7 +92,8 @@ a{
     border-radius: 8px;
     transition: color var(--transition),background var(--transition);
 }
-.nav-link:hover,.nav-link.active{
+.nav-link:hover,
+.nav-link.active{
     color: var(--primary) !important;
     background: rgba(37, 99, 255, 0.07);
 }
