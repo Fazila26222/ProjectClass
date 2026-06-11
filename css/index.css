@@ -107,3 +107,140 @@
     transition: all var(--transition) !important;
     box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35) !important;
 }
+.btn-hero-outline:hover{
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+    transform: translateY(-2px) !important;
+}
+/*
+.btn-hero-outline .play-icon{
+     width: 34px;
+     height: 34px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 12px;
+    transition: background var(--transition);
+}
+    */
+
+.hero-illustration{
+    background: linear-gradient(145deg, #dbeafe, #ede9fe);
+    border-radius: 24px;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-lg);
+}   
+.hero-illustration::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/texture.svg");
+} 
+.hero-illo-inner{
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+}
+.hero-illo-inner i{
+    font-size: 5rem;
+    color: var(--primary);
+    opacity: 0.6;
+
+}
+.hero-illo-inner p{
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    margin-top: 12px;
+}
+.hero-float-card{
+    position: absolute;
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 14px 18px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Sors",sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    animation: floatCard 3s ease-in-out infinite;
+}
+.hero-float-card.card1{
+    top: 24px;
+    left: -10px;
+    animation-delay: 0s;
+}
+.hero-float-card.card2{
+    bottom: 40px;
+    right: -10px;
+    animation-delay: 1.5s;
+}
+.hero-float-card .fc-icon{
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #fff;
+}.hero-float-card .fc-icon.green{
+    background: var(--primary);
+}
+.hero-float-card .fc-icon.blue{
+    background: var(--success) !important;
+}
+@keyframes floatCard{
+    0%,
+    100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-8px);
+    }
+}
+.hero-stats{
+    margin-top: 56px;
+
+}
+.stat-card{
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px 28px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: all var(--transition) !important;
+}
+.stat-card:hover{
+    box-shadow: var(--shadow-md) !important;
+    transform: translateY(-4px) !important;
+    border-color: rgba(37, 99, 235, 0.2) !important;
+}
+.stat-num{
+    font-family: "sora", sans-serif;
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 6px;
+    align-items: center;
+    text-align: center;
+}
+.stat-label{
+    font-size: 0.82rem !important;
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    align-items: center !important;
+    text-align: center !important;
+}
