@@ -244,3 +244,70 @@
     align-items: center !important;
     text-align: center !important;
 }
+/*features */
+.section-tag{
+    margin-top: 100px;
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--primary);
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(37, 99, 235, 0.15);
+}
+#features{
+    background: var(--bg-section);
+}
+.feature-card{
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    border: 1.5px solid var(--border);
+    text-align: center;
+    transition: all var(--transition);
+}
+.feature-card:hover{
+    background-color: rgba(37, 99, 235, 0.3);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+}
+.feature-icon{
+    width: 68px;
+    height: 68px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 22px;
+}
+.fi-blue{
+    background-color: rgba(37,99,255,0.1);
+    color: var(--primary);
+}
+.fi-green{
+    background-color: rgba(37,99,255,0.1);
+    color: var(--success);
+}
+.fi-yellow{
+    background-color: rgba(37,99,255,0.1);
+    color: var(--warning);
+}
+.fi-red{
+    background-color: rgba(37,99,255,0.1);
+    color: var(--danger);
+}
+.feature-card h5{
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10ppx;
+}
+.feature-card p{
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
