@@ -311,3 +311,118 @@
     color: var(--text-secondary);
     font-size: 0.9rem;
 }
+/* popular course */
+#courses{
+    background: var(--bg-main) !important;
+}
+.course-card{
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+    transition: all var(--transition);
+    height: 100%;
+}
+.course-card:hover{
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-6px);
+    border-color: rgba(37, 99, 235, 0.25);
+}
+.course-thumb{
+    height: 178px;
+    background: linear-gradient(135deg #dbeafe, #ede9fe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+}.course-thumb::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../images/diagonal-stripes.svg);
+}
+.course-cat{
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 11px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+.cat-blue{
+    background: rgba(37,99,235,0.1);
+    color: var(--primary);
+}
+.course-thumb-green{
+    background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+}
+.cat-green{
+    background: rgba(37,99,235,0.1);
+    color: var(--primary);
+}
+
+.course-body{
+    padding: 20px;
+
+}
+.course-title{
+    font-size: 0.79rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4px;
+    color: var(--text-primary);
+}
+.course-instructor{
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+.course-meta{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+
+}
+.stars{
+    color: var(--warning);
+    font-size: 0.8rem;
+}
+.course-meta span{
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+}
+.course-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding: 14px 20px;
+}
+.course-price{
+    font-family: 'Sora',sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+.btn-enroll{
+    font-family: "Sora",sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    background: var(--primary) !important;
+    color: #fff !important;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: all var(--transition) !important;
+}
+.btn-enroll:hover{
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    color: #fff !important;
+}
