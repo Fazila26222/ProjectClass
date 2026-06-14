@@ -243,6 +243,7 @@
     font-weight: 500;
     align-items: center !important;
     text-align: center !important;
+    justify-content: center !important;
 }
 /*features */
 .section-tag{
