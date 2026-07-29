@@ -1,0 +1,98 @@
+#page-hero {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 50%, #ede9fe 100%);
+    padding: 60px 0 50px;
+    overflow: hidden;
+}
+
+.url-hero a {
+    color: var(--primary);
+}
+
+.url-hero-item.active {
+    color: var(--text-secondary);
+}
+
+#page-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 800;
+    letter-spacing: -0.3rem;
+    margin-top: 10px;
+}
+
+#page-hero p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(37, 99, 235, .8);
+    color: var(--primary);
+    font-family: "sora";
+    font-size: .75rem;
+    letter-spacing: .06px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 50px;
+    border: 1px solid rgba(37, 99, 235, .15);
+}
+
+.search-wrap {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 6px 6px 6px 20px;
+    border: 1.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: border-color var(--transition), box-shadow var(--transition);
+
+}
+
+.search-wrap:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, .1);
+}
+
+.search-wrap i {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+
+}
+
+.search-wrap input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .95rem;
+    color: var(--text-primary);
+    flex: 1;
+    min-width: 0;
+}
+
+.search-wrap input::placeholder {
+    color: var(--text-light);
+}
+
+.btn-search {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .85rem;
+    color: #fff;
+    background-color: var(--primary);
+    border: none;
+    padding: 10px 22px;
+    border-radius: 11px;
+    white-space: nowarp;
+    transition: all var(--transition);
+    cursor: pointer;
+}
+.btn-search:hover{
+    background-color: var(--primar-hovery);
+    transform: translateY(-1px);
+}
