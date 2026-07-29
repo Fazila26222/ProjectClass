@@ -210,255 +210,922 @@
    </div>
     
 <!--courses-->
-     <section id="courses" class="section-pad">
-        <div class="container">
-          <!--
-            <div class="d-flex flex-wrap align-items-end justify-content-between mb-5 gap-3">
-                <div>
-                <div class="section-tag">Top Picks</div>
-                <h2 class="section-tital mb-1">Popular Courses</h2>
-                <div class="divider left"></div>
-                <p class="section-sub">
-                    Hand-picked by our experts to kickstart your journey.
-                </p>
-            </div>
-            <a href="#" class="btn btn-nav-login">
-                View All Courses <i class="bi bi-arrow-right ms-1"></i>
-            </a>
-            </div>
-          -->
+   <section style="padding:44px 0 80px">
+    <div class="container">
 
-            <div class="row g-4">
-                <!--Course -1 -->
-                 <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
+      <!-- ── COURSE GRID ── -->
+      <div>
+
+        <!-- Results info row -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+          <div>
+            <span id="resultsCount"
+              style="font-family:'Sora',sans-serif;font-size:.85rem;font-weight:600;color:var(--text-secondary)">
+              Showing <span style="color:var(--primary)">24</span> courses
+            </span>
+          </div>
+          <div class="d-flex align-items-center gap-2 d-md-none">
+            <span class="filter-label">Sort:</span>
+            <select class="sort-select" onchange="filterCourses()">
+              <option>Most Popular</option>
+              <option>Highest Rated</option>
+              <option>Newest</option>
+              <option>Price: Low–High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-4" id="courseGrid">
+
+          <!-- ===== COURSE 1 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Intermediate"
+            data-rating="4.8" data-price="49.99" data-students="3240">
             <div class="course-card">
+              <span class="thumb-badge badge-best">Bestseller</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
               <div class="course-thumb">
-                <i
-                  class="bi bi-code-slash"
-                  style="color: #2563eb; position: relative; z-index: 1"
-                ></i>
+                <i class="bi bi-code-slash" style="color:#2563EB;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-blue">Web Development</span>
-                <h6 class="course-title">
-                  The Complete JavaScript Developer Bootcamp
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>Alex Johnson
-                </p>
+                <h6 class="course-title">The Complete JavaScript Developer Bootcamp</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Alex Johnson</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-half"></i
-                  ></span>
-                  <span>4.8</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>3,240 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.8</span>
+                  <span><i class="bi bi-people-fill me-1"></i>3,240</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>42 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>180 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$49.99</span>
-                <a href="#" class="btn btn-enroll">Enroll Now</a>
+                <div class="price-box">
+                  <span class="course-price">$49.99</span>
+                  <span class="course-price-original">$99.99</span>
+                  <span class="discount-badge">-50%</span>
+                </div>
+                <a href="course-details.html" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
 
-          <!-- Course 2 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- ===== COURSE 2 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Data Science" data-level="Intermediate"
+            data-rating="5.0" data-price="69.99" data-students="5120">
             <div class="course-card">
-              <div class="course-thumb course-thumb-green">
-                <i
-                  class="bi bi-graph-up-arrow"
-                  style="color: #059669; position: relative; z-index: 1"
-                ></i>
+              <span class="thumb-badge badge-hot">🔥 Hot</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-green">
+                <i class="bi bi-graph-up-arrow" style="color:#059669;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-green">Data Science</span>
-                <h6 class="course-title">
-                  Python for Data Science &amp; Machine Learning
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>Sarah Williams
-                </p>
+                <h6 class="course-title">Python for Data Science &amp; Machine Learning</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Sarah Williams</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                  ></span>
-                  <span>5.0</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>5,120 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">5.0</span>
+                  <span><i class="bi bi-people-fill me-1"></i>5,120</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>56 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>220 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$69.99</span>
-                <a href="#" class="btn btn-enroll">Enroll Now</a>
+                <div class="price-box">
+                  <span class="course-price">$69.99</span>
+                  <span class="course-price-original">$129.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="course-details.html" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
 
-          <!-- Course 3 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- ===== COURSE 3 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="UI/UX Design" data-level="Beginner" data-rating="4.7"
+            data-price="44.99" data-students="2860">
             <div class="course-card">
-              <div class="course-thumb course-thumb-yellow">
-                <i
-                  class="bi bi-palette-fill"
-                  style="color: #d97706; position: relative; z-index: 1"
-                ></i>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-yellow">
+                <i class="bi bi-palette-fill" style="color:#D97706;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-yellow">UI/UX Design</span>
-                <h6 class="course-title">
-                  UI/UX Design Mastery with Figma 2024
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>Maya Chen
-                </p>
+                <h6 class="course-title">UI/UX Design Mastery with Figma 2024</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Maya Chen</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-half"></i
-                  ></span>
-                  <span>4.7</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>2,860 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.7</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,860</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>28 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>140 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$44.99</span>
+                <div class="price-box">
+                  <span class="course-price">$44.99</span>
+                  <span class="course-price-original">$84.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
                 <a href="#" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
 
-          <!-- Course 4 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- ===== COURSE 4 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Cloud Computing" data-level="Advanced"
+            data-rating="4.5" data-price="79.99" data-students="1990">
             <div class="course-card">
-              <div class="course-thumb course-thumb-red">
-                <i
-                  class="bi bi-cloud-fill"
-                  style="color: #dc2626; position: relative; z-index: 1"
-                ></i>
+              <span class="thumb-badge badge-best">Bestseller</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-red">
+                <i class="bi bi-cloud-fill" style="color:#DC2626;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-red">Cloud Computing</span>
-                <h6 class="course-title">
-                  AWS Cloud Solutions Architect Certification
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>David Kumar
-                </p>
+                <h6 class="course-title">AWS Cloud Solutions Architect Certification</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>David Kumar</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i><i class="bi bi-star"></i
-                  ></span>
-                  <span>4.5</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>1,990 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                  <span class="rating-val">4.5</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,990</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>38 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>160 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$79.99</span>
+                <div class="price-box">
+                  <span class="course-price">$79.99</span>
+                  <span class="course-price-original">$149.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
                 <a href="#" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
 
-          <!-- Course 5 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- ===== COURSE 5 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Mobile Dev" data-level="Intermediate" data-rating="4.6"
+            data-price="59.99" data-students="2100">
             <div class="course-card">
-              <div class="course-thumb course-thumb-purple">
-                <i
-                  class="bi bi-phone-fill"
-                  style="color: #7c3aed; position: relative; z-index: 1"
-                ></i>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-purple">
+                <i class="bi bi-phone-fill" style="color:#7C3AED;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-purple">Mobile Dev</span>
-                <h6 class="course-title">
-                  React Native: Build iOS &amp; Android Apps
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>James Lee
-                </p>
+                <h6 class="course-title">React Native: Build iOS &amp; Android Apps</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>James Lee</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-half"></i
-                  ></span>
-                  <span>4.6</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>2,100 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,100</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>32 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>155 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$59.99</span>
+                <div class="price-box">
+                  <span class="course-price">$59.99</span>
+                  <span class="course-price-original">$109.99</span>
+                  <span class="discount-badge">-45%</span>
+                </div>
                 <a href="#" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
 
-          <!-- Course 6 -->
-          <div class="col-md-6 col-lg-4">
+          <!-- ===== COURSE 6 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Cybersecurity" data-level="Intermediate"
+            data-rating="4.9" data-price="54.99" data-students="4450">
             <div class="course-card">
-              <div class="course-thumb course-thumb-teal">
-                <i
-                  class="bi bi-shield-check"
-                  style="color: #0d9488; position: relative; z-index: 1"
-                ></i>
+              <span class="thumb-badge badge-hot">🔥 Hot</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-teal">
+                <i class="bi bi-shield-check" style="color:#0D9488;position:relative;z-index:1"></i>
               </div>
               <div class="course-body">
                 <span class="course-cat cat-teal">Cybersecurity</span>
-                <h6 class="course-title">
-                  Ethical Hacking &amp; Cybersecurity Fundamentals
-                </h6>
-                <p class="course-instructor">
-                  <i class="bi bi-person-fill me-1"></i>Nina Rodriguez
-                </p>
+                <h6 class="course-title">Ethical Hacking &amp; Cybersecurity Fundamentals</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Nina Rodriguez</p>
                 <div class="course-meta">
-                  <span class="stars"
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                    ><i class="bi bi-star-fill"></i
-                  ></span>
-                  <span>4.9</span>
-                  <span
-                    ><i class="bi bi-people-fill me-1"></i>4,450 students</span
-                  >
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.9</span>
+                  <span><i class="bi bi-people-fill me-1"></i>4,450</span>
                 </div>
               </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>46 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>195 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
               <div class="course-footer">
-                <span class="course-price">$54.99</span>
+                <div class="price-box">
+                  <span class="course-price">$54.99</span>
+                  <span class="course-price-original">$99.99</span>
+                  <span class="discount-badge">-45%</span>
+                </div>
                 <a href="#" class="btn btn-enroll">Enroll Now</a>
               </div>
             </div>
           </div>
-    </div>
- </div>
- </section>
+
+          <!-- ===== COURSE 7 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Beginner"
+            data-rating="4.6" data-price="0" data-students="8900">
+            <div class="course-card">
+              <span class="thumb-badge badge-free">FREE</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-sky">
+                <i class="bi bi-filetype-html" style="color:#0EA5E9;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-sky">Web Development</span>
+                <h6 class="course-title">HTML5 &amp; CSS3 for Absolute Beginners</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Tom Bradley</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>8,900</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>8 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>48 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price" style="color:var(--success)">FREE</span>
+                </div>
+                <a href="#" class="btn btn-free">Enroll Free</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 8 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="DevOps" data-level="Advanced" data-rating="4.7"
+            data-price="74.99" data-students="1650">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-indigo">
+                <i class="bi bi-gear-wide-connected" style="color:#6366F1;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-indigo">DevOps</span>
+                <h6 class="course-title">Docker, Kubernetes &amp; DevOps Pipeline Mastery</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Chris Anderson</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.7</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,650</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>52 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>210 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$74.99</span>
+                  <span class="course-price-original">$139.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 9 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="AI & ML" data-level="Advanced" data-rating="4.9"
+            data-price="89.99" data-students="3300">
+            <div class="course-card">
+              <span class="thumb-badge badge-new">New</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-purple">
+                <i class="bi bi-robot" style="color:#7C3AED;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-purple">AI &amp; ML</span>
+                <h6 class="course-title">Deep Learning &amp; Neural Networks with TensorFlow</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Dr. Ava Patel</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.9</span>
+                  <span><i class="bi bi-people-fill me-1"></i>3,300</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>68 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>260 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$89.99</span>
+                  <span class="course-price-original">$169.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 10 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Intermediate"
+            data-rating="4.8" data-price="64.99" data-students="2700">
+            <div class="course-card">
+              <span class="thumb-badge badge-best">Bestseller</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb">
+                <i class="bi bi-filetype-jsx" style="color:#2563EB;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-blue">Web Development</span>
+                <h6 class="course-title">React.js &amp; Redux: Complete Web App Development</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Lucas Smith</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.8</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,700</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>44 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>188 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$64.99</span>
+                  <span class="course-price-original">$124.99</span>
+                  <span class="discount-badge">-48%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 11 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Data Science" data-level="Beginner" data-rating="4.5"
+            data-price="39.99" data-students="4100">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-green">
+                <i class="bi bi-table" style="color:#059669;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-green">Data Science</span>
+                <h6 class="course-title">SQL for Data Analysis: Zero to Pro</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Emma Wilson</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                  <span class="rating-val">4.5</span>
+                  <span><i class="bi bi-people-fill me-1"></i>4,100</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>18 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>92 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$39.99</span>
+                  <span class="course-price-original">$74.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 12 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="UI/UX Design" data-level="Intermediate"
+            data-rating="4.8" data-price="54.99" data-students="1820">
+            <div class="course-card">
+              <span class="thumb-badge badge-new">New</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-pink">
+                <i class="bi bi-vector-pen" style="color:#DB2777;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-pink">UI/UX Design</span>
+                <h6 class="course-title">Motion Design &amp; Micro-Animations in Figma</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Zara Ahmed</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.8</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,820</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>22 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>110 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$54.99</span>
+                  <span class="course-price-original">$99.99</span>
+                  <span class="discount-badge">-45%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 13 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Advanced"
+            data-rating="4.7" data-price="72.99" data-students="1450">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb">
+                <i class="bi bi-server" style="color:#2563EB;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-blue">Web Development</span>
+                <h6 class="course-title">Node.js, Express &amp; MongoDB: Full Stack Web Apps</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Ryan Thompson</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.7</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,450</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>50 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>200 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$72.99</span>
+                  <span class="course-price-original">$134.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 14 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Cloud Computing" data-level="Intermediate"
+            data-rating="4.6" data-price="67.99" data-students="1320">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-sky">
+                <i class="bi bi-microsoft" style="color:#0EA5E9;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-sky">Cloud Computing</span>
+                <h6 class="course-title">Microsoft Azure Fundamentals (AZ-900) Prep</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Priya Nair</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,320</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>30 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>130 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$67.99</span>
+                  <span class="course-price-original">$124.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 15 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Cybersecurity" data-level="Advanced" data-rating="4.8"
+            data-price="84.99" data-students="980">
+            <div class="course-card">
+              <span class="thumb-badge badge-new">New</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-teal">
+                <i class="bi bi-lock-fill" style="color:#0D9488;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-teal">Cybersecurity</span>
+                <h6 class="course-title">Penetration Testing &amp; Bug Bounty Hunting Pro</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Marcus Hayes</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.8</span>
+                  <span><i class="bi bi-people-fill me-1"></i>980</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>60 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>240 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$84.99</span>
+                  <span class="course-price-original">$159.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 16 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="DevOps" data-level="Intermediate" data-rating="4.5"
+            data-price="62.99" data-students="1100">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-indigo">
+                <i class="bi bi-git" style="color:#6366F1;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-indigo">DevOps</span>
+                <h6 class="course-title">CI/CD Pipelines with GitHub Actions &amp; Jenkins</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Sofia Martins</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                  <span class="rating-val">4.5</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,100</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>35 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>145 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$62.99</span>
+                  <span class="course-price-original">$114.99</span>
+                  <span class="discount-badge">-45%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 17 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Mobile Dev" data-level="Beginner" data-rating="4.6"
+            data-price="49.99" data-students="1780">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-orange">
+                <i class="bi bi-apple" style="color:#EA580C;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-orange">Mobile Dev</span>
+                <h6 class="course-title">SwiftUI: Build iOS 17 Apps from Scratch</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Oliver Grant</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,780</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>26 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>118 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$49.99</span>
+                  <span class="course-price-original">$94.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 18 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Data Science" data-level="Intermediate"
+            data-rating="4.7" data-price="59.99" data-students="2200">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-green">
+                <i class="bi bi-bar-chart-fill" style="color:#059669;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-green">Data Science</span>
+                <h6 class="course-title">Power BI &amp; Tableau: Data Visualization Mastery</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Lena Fischer</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.7</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,200</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>24 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>100 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$59.99</span>
+                  <span class="course-price-original">$109.99</span>
+                  <span class="discount-badge">-45%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 19 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Blockchain" data-level="Intermediate" data-rating="4.6"
+            data-price="77.99" data-students="870">
+            <div class="course-card">
+              <span class="thumb-badge badge-new">New</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-yellow">
+                <i class="bi bi-currency-bitcoin" style="color:#D97706;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-yellow">Blockchain</span>
+                <h6 class="course-title">Solidity &amp; Ethereum Smart Contract Development</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Noah Bennett</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>870</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>40 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>165 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$77.99</span>
+                  <span class="course-price-original">$144.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 20 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Beginner"
+            data-rating="4.5" data-price="0" data-students="6700">
+            <div class="course-card">
+              <span class="thumb-badge badge-free">FREE</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-sky">
+                <i class="bi bi-filetype-py" style="color:#0EA5E9;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-sky">Web Development</span>
+                <h6 class="course-title">Python Programming: Complete Beginner's Guide</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Aisha Okafor</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                  <span class="rating-val">4.5</span>
+                  <span><i class="bi bi-people-fill me-1"></i>6,700</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>10 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>58 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price" style="color:var(--success)">FREE</span>
+                </div>
+                <a href="#" class="btn btn-free">Enroll Free</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 21 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Web Development" data-level="Intermediate"
+            data-rating="4.7" data-price="57.99" data-students="1950">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb">
+                <i class="bi bi-filetype-tsx" style="color:#2563EB;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-blue">Web Development</span>
+                <h6 class="course-title">TypeScript &amp; Next.js: Modern Full Stack Apps</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Kim Jae-won</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.7</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,950</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>48 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>198 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-intermediate">Intermediate</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$57.99</span>
+                  <span class="course-price-original">$109.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 22 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="UI/UX Design" data-level="Beginner" data-rating="4.6"
+            data-price="42.99" data-students="2450">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-pink">
+                <i class="bi bi-easel2-fill" style="color:#DB2777;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-pink">UI/UX Design</span>
+                <h6 class="course-title">User Research &amp; Wireframing for Beginners</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Hana Sato</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
+                  <span class="rating-val">4.6</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,450</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>16 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>78 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$42.99</span>
+                  <span class="course-price-original">$79.99</span>
+                  <span class="discount-badge">-46%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 23 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Data Science" data-level="Advanced" data-rating="4.8"
+            data-price="79.99" data-students="1600">
+            <div class="course-card">
+              <span class="thumb-badge badge-best">Bestseller</span>
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-green">
+                <i class="bi bi-cpu-fill" style="color:#059669;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-green">Data Science</span>
+                <h6 class="course-title">Natural Language Processing with Transformers</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Dr. Wei Zhang</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
+                  <span class="rating-val">4.8</span>
+                  <span><i class="bi bi-people-fill me-1"></i>1,600</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>55 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>225 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-advanced">Advanced</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$79.99</span>
+                  <span class="course-price-original">$149.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== COURSE 24 ===== -->
+          <div class="col-sm-6 col-lg-4 col-xl-3" data-category="Cloud Computing" data-level="Beginner"
+            data-rating="4.5" data-price="44.99" data-students="2050">
+            <div class="course-card">
+              <button class="btn-wish" title="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="course-thumb ct-red">
+                <i class="bi bi-google" style="color:#DC2626;position:relative;z-index:1"></i>
+              </div>
+              <div class="course-body">
+                <span class="course-cat cat-red">Cloud Computing</span>
+                <h6 class="course-title">Google Cloud Platform (GCP): Beginner to Pro</h6>
+                <p class="course-instructor"><i class="bi bi-person-fill me-1"></i>Daniel Osei</p>
+                <div class="course-meta">
+                  <span class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
+                  <span class="rating-val">4.5</span>
+                  <span><i class="bi bi-people-fill me-1"></i>2,050</span>
+                </div>
+              </div>
+              <div class="course-attrs">
+                <span class="attr-item"><i class="bi bi-clock"></i>22 hrs</span>
+                <span class="attr-item"><i class="bi bi-journal-text"></i>96 lessons</span>
+                <span class="attr-item"><i class="bi bi-translate"></i>English</span>
+                <span class="level-pill lp-beginner">Beginner</span>
+              </div>
+              <div class="course-footer">
+                <div class="price-box">
+                  <span class="course-price">$44.99</span>
+                  <span class="course-price-original">$84.99</span>
+                  <span class="discount-badge">-47%</span>
+                </div>
+                <a href="#" class="btn btn-enroll">Enroll Now</a>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /courseGrid row -->
+
+        <!-- Empty state (hidden by default) -->
+        <div id="emptyState" class="empty-state d-none">
+          <i class="bi bi-search"></i>
+          <h5>No courses found</h5>
+          <p>Try a different search term or adjust your filters.</p>
+        </div>
+
+        <!-- PAGINATION (built dynamically by JS) -->
+        <nav class="mt-5 d-flex justify-content-center" id="paginationWrap">
+          <ul class="pagination gap-1" id="paginationList"></ul>
+        </nav>
+
+      </div><!-- /course grid col -->
+    </div><!-- /container -->
+  </section>
     <!-- =============================================
      10. FOOTER
 ============================================= -->
